@@ -1,0 +1,145 @@
+<html><head><base href="/">
+<meta charset="UTF-8">
+<title>Nevear Games - Terms of Service</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Crimson Text', serif;
+    background-color: #0a1520;
+    color: #ffffff;
+    padding-bottom: 100px;
+  }
+
+  .header {
+    background: linear-gradient(rgba(10,21,32,0.7), rgba(10,21,32,0.9)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a2535"/><path d="M0 50 L100 50" stroke="%23233545" stroke-width="0.5"/></svg>');
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    animation: flicker 4s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.9; }
+    25%, 75% { opacity: 0.7; }
+  }
+
+  .content-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1a2535;
+    border: 1px solid #2a3545;
+    line-height: 1.6;
+    color: #b0c4de;
+  }
+
+  .section-title {
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    background: #0f1925;
+    padding: 1.5rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer a {
+    color: #b0c4de;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+  }
+
+  .footer a:hover {
+    color: #ffffff;
+  }
+
+  .footer-year {
+    color: #4a5565;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #233545;
+    color: #b0c4de;
+    text-decoration: none;
+    margin: 1rem;
+    transition: background-color 0.3s;
+  }
+
+  .back-button:hover {
+    background: #2a3545;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">NEVEAR GAMES</div>
+    <a href="/" class="back-button">← Back to Home</a>
+  </div>
+
+  <div class="content-container">
+    <h1>Terms of Service</h1>
+    <p>Last updated: January 1, 2024</p>
+
+    <div class="section-title">1. Acceptance of Terms</div>
+    <p>By accessing and using Nevear Games' services, including our games and website, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+
+    <div class="section-title">2. User Accounts</div>
+    <p>When creating an account with Nevear Games, you must provide accurate and complete information. You are responsible for maintaining the security of your account and password. Nevear Games cannot and will not be liable for any loss or damage resulting from your failure to comply with this security obligation.</p>
+
+    <div class="section-title">3. Intellectual Property</div>
+    <p>All games, content, and materials available through Nevear Games are protected by intellectual property rights. You may not modify, distribute, or create derivative works based on our content without explicit written permission.</p>
+
+    <div class="section-title">4. User Conduct</div>
+    <p>Users agree not to engage in any activity that interferes with or disrupts the services, servers, or networks connected to Nevear Games. This includes attempting to gain unauthorized access to our services or other users' accounts.</p>
+
+    <div class="section-title">5. Game Content</div>
+    <p>Our games may contain mature themes and psychological horror elements. Users acknowledge that they are accessing this content at their own risk and discretion.</p>
+
+    <div class="section-title">6. Modifications to Service</div>
+    <p>Nevear Games reserves the right to modify or discontinue, temporarily or permanently, any part of our services with or without notice.</p>
+  </div>
+
+  <div class="footer">
+    <div>
+      <a href="https://nevear-games.com/privacy-policy">Privacy Policy</a>
+      <a href="https://nevear-games.com/terms-of-service">Terms of Service</a>
+    </div>
+    <div class="footer-year">© 2024 Nevear Games. All rights reserved.</div>
+  </div>
+
+  <script>
+    const header = document.querySelector('.header');
+    let offset = 0;
+    
+    function animateBackground() {
+      offset += 0.5;
+      header.style.backgroundPosition = `${offset}px ${offset}px`;
+      requestAnimationFrame(animateBackground);
+    }
+
+    animateBackground();
+  </script>
+</body></html>
