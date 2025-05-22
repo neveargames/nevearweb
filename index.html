@@ -1,5 +1,6 @@
 <html><head><base href="/">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nevear Games - Indie Horror Game Studio</title>
 <style>
   body {
@@ -7,7 +8,7 @@
     font-family: 'Crimson Text', serif;
     background-color: #0a1520;
     color: #ffffff;
-    padding-bottom: 100px; /* Added padding to create space above footer */
+    padding-bottom: 100px; /* Crucial: Creates space for the fixed footer */
   }
 
   .header {
@@ -45,21 +46,26 @@
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
-    margin-bottom: 2rem; /* Added margin to create space below games */
+    /* Removed margin-bottom here as padding-bottom on body handles footer space */
   }
 
   .game-card {
-    width: 300px;
+    width: 300px; /* Base width */
     background: #1a2535;
     border: 1px solid #2a3545;
     padding: 1rem;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   }
 
   .game-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(176,196,222,0.2);
+  }
+
+  .game-card:active {
+    transform: translateY(0);
+    box-shadow: none;
   }
 
   .game-title {
@@ -75,14 +81,15 @@
 
   .footer {
     background: #0f1925;
-    padding: 1.5rem; /* Increased padding */
+    padding: 1.5rem;
     text-align: center;
-    position: fixed;
+    position: fixed; /* Keep fixed for both desktop and mobile */
     bottom: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 1000; /* Ensure footer stays on top of other content */
   }
 
   .footer a {
@@ -112,6 +119,88 @@
     justify-content: center;
     overflow: hidden;
   }
+
+  /* --- Media Queries for Mobile Responsiveness --- */
+  @media (max-width: 768px) {
+    .header {
+      padding: 2rem 1rem;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+    }
+
+    .studio-description {
+      font-size: 1rem;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .games-container {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      gap: 1.5rem;
+    }
+
+    .game-card {
+      width: 90%;
+      max-width: 320px;
+      padding: 0.8rem;
+    }
+
+    .game-title {
+      font-size: 1.3rem;
+    }
+
+    .game-description {
+      font-size: 0.95rem;
+    }
+
+    /* Footer adjustments for mobile */
+    .footer {
+      padding: 1rem; /* Slightly reduce padding on mobile footer */
+      /* `position: fixed;` is maintained */
+    }
+
+    .footer a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-year {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 1.5rem 0.5rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+    }
+
+    .studio-description {
+      font-size: 0.9rem;
+      margin: 1rem auto;
+      padding: 0 0.5rem;
+    }
+
+    .game-card {
+      width: 95%;
+      padding: 0.7rem;
+    }
+
+    .game-title {
+      font-size: 1.2rem;
+    }
+
+    .game-description {
+      font-size: 0.9rem;
+    }
+  }
 </style>
 </head>
 <body>
@@ -124,7 +213,7 @@
   </div>
 
   <div class="games-container">
-      <div class="game-card" onclick="window.open('https://play.google.com/store/apps/details?id=com.Nevear.HerDiary', '_blank');">
+      <div class="game-card" data-url="https://play.google.com/store/apps/details?id=com.Nevear.HerDiary">
         <div class="game-preview">
           <img src="/nevearweb/images/her_diary_image.jpg" alt="Her Diary" style="width: 100%; height: auto; object-fit: cover;" />
         </div>
@@ -132,7 +221,7 @@
         <p class="game-description">Uncover the haunting truth behind a young girl's tragic fate through the pages of her diary. Each entry reveals a darker secret that will challenge your perception of reality.</p>
       </div>
 
-      <div class="game-card" onclick="window.open('https://play.google.com/store/apps/details?id=com.Nevear.ElectricHeart', '_blank');">
+      <div class="game-card" data-url="https://play.google.com/store/apps/details?id=com.Nevear.ElectricHeart">
         <div class="game-preview">
           <img src="/nevearweb/images/electric_heart_image.jpg" alt="Electric Heart" style="width: 100%; height: auto; object-fit: cover;" />
         </div>
@@ -152,10 +241,10 @@
   <script>
     document.querySelectorAll('.game-card').forEach(card => {
       card.addEventListener('click', () => {
-        card.style.transform = 'scale(1.02)';
-        setTimeout(() => {
-          card.style.transform = 'translateY(-5px)';
-        }, 200);
+        const url = card.getAttribute('data-url');
+        if (url) {
+          window.open(url, '_blank');
+        }
       });
     });
 
