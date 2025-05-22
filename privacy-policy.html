@@ -39,11 +39,11 @@
     background: #1a2535;
     border: 1px solid #2a3545;
     line-height: 1.6;
-    color: #b0c4de;
+    color: #b0c4de; /* Base text color for content */
   }
 
   .content-container h1 {
-      color: #ffffff;
+      /* Reverted: Removed explicit color #ffffff, it will now inherit #b0c4de */
       font-size: 2rem;
       margin-top: 0;
       margin-bottom: 1rem;
@@ -63,7 +63,7 @@
   }
 
   .section-title {
-    color: #ffffff;
+    color: #ffffff; /* This remains white as per your original structure */
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -117,40 +117,41 @@
   /* --- Media Queries for Mobile Responsiveness --- */
   @media (max-width: 768px) {
     .header {
-      padding: 1.5rem 1rem; /* Reduce header padding */
+      padding: 1.5rem 1rem;
     }
 
     .logo {
-      font-size: 2.5rem; /* Smaller logo on mobile */
+      font-size: 2.5rem;
     }
 
     .content-container {
-      margin: 1rem auto; /* Adjust margin */
-      padding: 1.5rem; /* Reduce padding */
-      width: auto; /* Allow width to be flexible */
-      max-width: 95%; /* Prevent content from stretching too wide on smaller tablets */
+      margin: 1rem auto;
+      padding: 1.5rem;
+      width: auto;
+      max-width: 95%;
     }
 
     .content-container h1 {
-        font-size: 1.7rem; /* Adjust heading size */
+        /* This rule now only sets font-size, color will inherit from .content-container */
+        font-size: 1.7rem;
     }
 
     .section-title {
-      font-size: 1.3rem; /* Adjust section title size */
+      font-size: 1.3rem;
       margin-top: 1.5rem;
     }
 
     .content-container p,
     .content-container li {
-      font-size: 0.95rem; /* Adjust text size for readability */
+      font-size: 0.95rem;
     }
 
     .footer {
-      padding: 1rem; /* Reduce footer padding */
+      padding: 1rem;
     }
 
     .footer a {
-      margin: 0 0.5rem; /* Reduce margin between footer links */
+      margin: 0 0.5rem;
       font-size: 0.9rem;
     }
 
@@ -159,7 +160,7 @@
     }
 
     .back-button {
-      margin: 0.5rem; /* Adjust back button margin */
+      margin: 0.5rem;
       padding: 0.4rem 0.8rem;
       font-size: 0.9rem;
     }
