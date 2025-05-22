@@ -1,5 +1,6 @@
 <html><head><base href="/">
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nevear Games - Terms of Service</title>
 <style>
   body {
@@ -7,7 +8,7 @@
     font-family: 'Crimson Text', serif;
     background-color: #0a1520;
     color: #ffffff;
-    padding-bottom: 100px;
+    padding-bottom: 100px; /* Space for fixed footer */
   }
 
   .header {
@@ -38,11 +39,22 @@
     background: #1a2535;
     border: 1px solid #2a3545;
     line-height: 1.6;
-    color: #b0c4de;
+    color: #b0c4de; /* Base text color for content */
+  }
+
+  .content-container h1 {
+      /* Reverted: Removed explicit color #ffffff, it will now inherit #b0c4de */
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+  }
+
+  .content-container p {
+      margin-bottom: 1em;
   }
 
   .section-title {
-    color: #ffffff;
+    color: #ffffff; /* This remains white as per your original structure */
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -58,6 +70,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 1000; /* Ensure footer stays on top */
   }
 
   .footer a {
@@ -90,6 +103,95 @@
   .back-button:hover {
     background: #2a3545;
     color: #ffffff;
+  }
+
+  /* --- Media Queries for Mobile Responsiveness --- */
+  @media (max-width: 768px) {
+    .header {
+      padding: 1.5rem 1rem;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+    }
+
+    .content-container {
+      margin: 1rem auto;
+      padding: 1.5rem;
+      width: auto;
+      max-width: 95%;
+    }
+
+    .content-container h1 {
+        /* This rule now only sets font-size, color will inherit from .content-container */
+        font-size: 1.7rem;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+    }
+
+    .content-container p,
+    .content-container li {
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      padding: 1rem;
+    }
+
+    .footer a {
+      margin: 0 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-year {
+      font-size: 0.8rem;
+    }
+
+    .back-button {
+      margin: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 1rem 0.5rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+    }
+
+    .content-container {
+      padding: 1rem;
+      max-width: 98%;
+    }
+
+    .content-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+    }
+
+    .content-container p,
+    .content-container li {
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      padding: 0.8rem;
+    }
+
+    .footer a {
+      margin: 0 0.3rem;
+      font-size: 0.85rem;
+    }
   }
 </style>
 </head>
