@@ -1,13 +1,14 @@
 <html><head><base href="/">
 <meta charset="UTF-8">
-<title>Nevear Games - Terms of Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nevear Games - Privacy Policy</title>
 <style>
   body {
     margin: 0;
     font-family: 'Crimson Text', serif;
     background-color: #0a1520;
     color: #ffffff;
-    padding-bottom: 100px;
+    padding-bottom: 100px; /* Space for fixed footer */
   }
 
   .header {
@@ -41,6 +42,26 @@
     color: #b0c4de;
   }
 
+  .content-container h1 {
+      color: #ffffff;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+  }
+
+  .content-container p {
+      margin-bottom: 1em;
+  }
+
+  .content-container ul {
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+  }
+
+  .content-container ul li {
+      margin-bottom: 0.5em;
+  }
+
   .section-title {
     color: #ffffff;
     margin-top: 2rem;
@@ -58,6 +79,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    z-index: 1000; /* Ensure footer stays on top */
   }
 
   .footer a {
@@ -90,6 +112,94 @@
   .back-button:hover {
     background: #2a3545;
     color: #ffffff;
+  }
+
+  /* --- Media Queries for Mobile Responsiveness --- */
+  @media (max-width: 768px) {
+    .header {
+      padding: 1.5rem 1rem; /* Reduce header padding */
+    }
+
+    .logo {
+      font-size: 2.5rem; /* Smaller logo on mobile */
+    }
+
+    .content-container {
+      margin: 1rem auto; /* Adjust margin */
+      padding: 1.5rem; /* Reduce padding */
+      width: auto; /* Allow width to be flexible */
+      max-width: 95%; /* Prevent content from stretching too wide on smaller tablets */
+    }
+
+    .content-container h1 {
+        font-size: 1.7rem; /* Adjust heading size */
+    }
+
+    .section-title {
+      font-size: 1.3rem; /* Adjust section title size */
+      margin-top: 1.5rem;
+    }
+
+    .content-container p,
+    .content-container li {
+      font-size: 0.95rem; /* Adjust text size for readability */
+    }
+
+    .footer {
+      padding: 1rem; /* Reduce footer padding */
+    }
+
+    .footer a {
+      margin: 0 0.5rem; /* Reduce margin between footer links */
+      font-size: 0.9rem;
+    }
+
+    .footer-year {
+      font-size: 0.8rem;
+    }
+
+    .back-button {
+      margin: 0.5rem; /* Adjust back button margin */
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header {
+      padding: 1rem 0.5rem;
+    }
+
+    .logo {
+      font-size: 2rem;
+    }
+
+    .content-container {
+      padding: 1rem;
+      max-width: 98%;
+    }
+
+    .content-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+    }
+
+    .content-container p,
+    .content-container li {
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      padding: 0.8rem;
+    }
+
+    .footer a {
+      margin: 0 0.3rem;
+      font-size: 0.85rem;
+    }
   }
 </style>
 </head>
