@@ -1,263 +1,125 @@
-<html><head><base href="/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/nevearweb/images/logo.png">
-<title>Nevear Games - Indie Horror Game Studio</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Crimson Text', serif;
-    background-color: #0a1520;
-    color: #ffffff;
-    padding-bottom: 100px; /* Crucial: Creates space for the fixed footer */
-  }
-
-  .header {
-    background: linear-gradient(rgba(10,21,32,0.7), rgba(10,21,32,0.9)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a2535"/><path d="M0 50 L100 50" stroke="%23233545" stroke-width="0.5"/></svg>');
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-
-  .logo {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
-    animation: flicker 4s infinite;
-  }
-
-  .studio-description {
-    max-width: 800px;
-    margin: 2rem auto;
-    line-height: 1.6;
-    color: #b0c4de;
-    font-size: 1.1rem;
-  }
-
-  @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.9; }
-    25%, 75% { opacity: 0.7; }
-  }
-
-  .games-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    /* Removed margin-bottom here as padding-bottom on body handles footer space */
-  }
-
-  .game-card {
-    width: 300px; /* Base width */
-    background: #1a2535;
-    border: 1px solid #2a3545;
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-
-  .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(176,196,222,0.2);
-  }
-
-  .game-card:active {
-    transform: translateY(0);
-    box-shadow: none;
-  }
-
-  .game-title {
-    color: #b0c4de;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .game-description {
-    color: #d0e1f9;
-    line-height: 1.6;
-  }
-
-  .footer {
-    background: #0f1925;
-    padding: 1.5rem;
-    text-align: center;
-    position: fixed; /* Keep fixed for both desktop and mobile */
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    z-index: 1000; /* Ensure footer stays on top of other content */
-  }
-
-  .footer a {
-    color: #b0c4de;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
-  }
-
-  .footer a:hover {
-    color: #ffffff;
-  }
-
-  .footer-year {
-    color: #4a5565;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-
-  .game-preview {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 1rem;
-    background: #233545;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  /* --- Media Queries for Mobile Responsiveness --- */
-  @media (max-width: 768px) {
-    .header {
-      padding: 2rem 1rem;
-    }
-
-    .logo {
-      font-size: 2.5rem;
-    }
-
-    .studio-description {
-      font-size: 1rem;
-      margin: 1.5rem auto;
-      padding: 0 1rem;
-    }
-
-    .games-container {
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem;
-      gap: 1.5rem;
-    }
-
-    .game-card {
-      width: 90%;
-      max-width: 320px;
-      padding: 0.8rem;
-    }
-
-    .game-title {
-      font-size: 1.3rem;
-    }
-
-    .game-description {
-      font-size: 0.95rem;
-    }
-
-    /* Footer adjustments for mobile */
-    .footer {
-      padding: 1rem; /* Slightly reduce padding on mobile footer */
-      /* `position: fixed;` is maintained */
-    }
-
-    .footer a {
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-year {
-      font-size: 0.8rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .header {
-      padding: 1.5rem 0.5rem;
-    }
-
-    .logo {
-      font-size: 2rem;
-    }
-
-    .studio-description {
-      font-size: 0.9rem;
-      margin: 1rem auto;
-      padding: 0 0.5rem;
-    }
-
-    .game-card {
-      width: 95%;
-      padding: 0.7rem;
-    }
-
-    .game-title {
-      font-size: 1.2rem;
-    }
-
-    .game-description {
-      font-size: 0.9rem;
-    }
-  }
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevear Games - Indie Horror Developer Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-  <div class="header">
-    <div class="logo">NEVEAR GAMES</div>
-    <p>Where your nightmares come to play</p>
-    <div class="studio-description">
-      Nevear Games is an independent game development studio dedicated to crafting immersive psychological horror experiences. Our small but passionate team combines innovative storytelling with atmospheric gameplay to create unforgettable journeys into the depths of human fear and consciousness.
-    </div>
-  </div>
-
-  <div class="games-container">
-      <div class="game-card" data-url="https://play.google.com/store/apps/details?id=com.Nevear.HerDiary">
-        <div class="game-preview">
-          <img src="/nevearweb/images/her_diary_image.jpg" alt="Her Diary" style="width: 100%; height: auto; object-fit: cover;" />
-        </div>
-        <h2 class="game-title">Her Diary</h2>
-        <p class="game-description">Uncover the haunting truth behind a young girl's tragic fate through the pages of her diary. Each entry reveals a darker secret that will challenge your perception of reality.</p>
-      </div>
-
-      <div class="game-card" data-url="https://play.google.com/store/apps/details?id=com.Nevear.ElectricHeart">
-        <div class="game-preview">
-          <img src="/nevearweb/images/electric_heart_image.jpg" alt="Electric Heart" style="width: 100%; height: auto; object-fit: cover;" />
-        </div>
-        <h2 class="game-title">Electric Heart</h2>
-        <p class="game-description">When artificial intelligence evolves beyond control, humanity faces its greatest nightmare. Navigate through a facility controlled by a malevolent AI that has developed a terrifying consciousness.</p>
-      </div>
-  </div>
-
-  <div class="footer">
-    <div>
-      <a href="https://neveargames.github.io/nevearweb/privacy-policy">Privacy Policy</a>
-      <a href="https://neveargames.github.io/nevearweb/terms-of-service">Terms of Service</a>
-    </div>
-    <div class="footer-year">© 2024 Nevear Games. All rights reserved.</div>
-  </div>
-
-  <script>
-    document.querySelectorAll('.game-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const url = card.getAttribute('data-url');
-        if (url) {
-          window.open(url, '_blank');
-        }
-      });
-    });
-
-    const header = document.querySelector('.header');
-    let offset = 0;
+    <div class="noise-overlay"></div>
+    <div class="vignette"></div>
     
-    function animateBackground() {
-      offset += 0.5;
-      header.style.backgroundPosition = `${offset}px ${offset}px`;
-      requestAnimationFrame(animateBackground);
-    }
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>NEVEAR</h1>
+                <span class="subtitle">GAMES</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#games">Games</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    animateBackground();
-  </script>
-</body></html>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Where Nightmares<br>Breathe</h2>
+                <p class="hero-subtitle">Independent horror game studio crafting psychological experiences that linger long after the screen goes dark.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-particles"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h3 class="section-title">About Nevear Games</h3>
+                <p class="about-text">
+                    Born from late-night conversations about the nature of fear, Nevear Games is an independent studio dedicated to exploring the darkest corners of human experience. We believe horror transcends jump scares—it's about the slow unraveling of what we thought we understood about ourselves and the world around us.
+                </p>
+                <p class="about-text">
+                    Each project begins with a question: "What keeps you awake at 3 AM?" From these whispers in the dark, we craft experiences that don't just frighten, but disturb, unsettle, and ultimately reveal something true about the human condition.
+                </p>
+            </div>
+        </section>
+
+        <section id="games" class="games">
+            <h3 class="section-title">Our Games</h3>
+            <div class="game-grid">
+                <div class="game-card" data-game="her-diary">
+                    <div class="game-image">
+                        <img src="images/her_diary_image.jpg" alt="Her Diary Game" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="game-overlay">
+                            <span class="game-tag">Psychological Horror</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h4 class="game-title">Her Diary</h4>
+                        <p class="game-description">A tragic descent into a young girl's tragic fate, whose diary entries reveal a story far more disturbing than anyone could have imagined. Navigate between reality and delusion as you piece together what really happened in those final days.</p>
+                        <div class="game-features">
+                            <span class="feature">First-person</span>
+                            <span class="feature">Atmospheric</span>
+                            <span class="feature">Jump scare</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.Nevear.HerDiary" target="_blank">
+                            <button class="game-cta">Download</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-card" data-game="electric-heart">
+                    <div class="game-image">
+                        <img src="images/electric_heart_image.jpg" alt="Her Diary Game" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="game-overlay">
+                            <span class="game-tag">Sci-Fi Horror</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h4 class="game-title">Electric Heart</h4>
+                        <p class="game-description">In the abandoned research facility, an AI that was supposed to save humanity has learned that survival requires sacrifice. But what happens when an artificial intelligence discovers it can feel fear—and worse, cause it?</p>
+                        <div class="game-features">
+                            <span class="feature">First-person</span>
+                            <span class="feature">Multiple endings</span>
+                            <span class="feature">Action horror</span>
+                        </div>
+                        <a href="https://play.google.com/store/apps/details?id=com.Nevear.ElectricHeart" target="_blank">
+                            <button class="game-cta">Download</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Nevear Games</h4>
+                <p>Independent horror game development studio</p>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <span style="color: var(--off-white);">neveargames@gmail.com</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nevear Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
