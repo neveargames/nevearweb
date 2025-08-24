@@ -1,248 +1,107 @@
-<html><head><base href="/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/nevearweb/images/logo.png">
-<title>Nevear Games - Terms of Service</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Crimson Text', serif;
-    background-color: #0a1520;
-    color: #ffffff;
-    padding-bottom: 100px; /* Space for fixed footer */
-  }
-
-  .header {
-    background: linear-gradient(rgba(10,21,32,0.7), rgba(10,21,32,0.9)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a2535"/><path d="M0 50 L100 50" stroke="%23233545" stroke-width="0.5"/></svg>');
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .logo {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
-    animation: flicker 4s infinite;
-  }
-
-  @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.9; }
-    25%, 75% { opacity: 0.7; }
-  }
-
-  .content-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #1a2535;
-    border: 1px solid #2a3545;
-    line-height: 1.6;
-    color: #b0c4de; /* Base text color for content */
-  }
-
-  .content-container h1 {
-      /* Reverted: Removed explicit color #ffffff, it will now inherit #b0c4de */
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-  }
-
-  .content-container p {
-      margin-bottom: 1em;
-  }
-
-  .section-title {
-    color: #ffffff; /* This remains white as per your original structure */
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .footer {
-    background: #0f1925;
-    padding: 1.5rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    z-index: 1000; /* Ensure footer stays on top */
-  }
-
-  .footer a {
-    color: #b0c4de;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
-  }
-
-  .footer a:hover {
-    color: #ffffff;
-  }
-
-  .footer-year {
-    color: #4a5565;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-
-  .back-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #233545;
-    color: #b0c4de;
-    text-decoration: none;
-    margin: 1rem;
-    transition: background-color 0.3s;
-  }
-
-  .back-button:hover {
-    background: #2a3545;
-    color: #ffffff;
-  }
-
-  /* --- Media Queries for Mobile Responsiveness --- */
-  @media (max-width: 768px) {
-    .header {
-      padding: 1.5rem 1rem;
-    }
-
-    .logo {
-      font-size: 2.5rem;
-    }
-
-    .content-container {
-      margin: 1rem auto;
-      padding: 1.5rem;
-      width: auto;
-      max-width: 95%;
-    }
-
-    .content-container h1 {
-        /* This rule now only sets font-size, color will inherit from .content-container */
-        font-size: 1.7rem;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      margin-top: 1.5rem;
-    }
-
-    .content-container p,
-    .content-container li {
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      padding: 1rem;
-    }
-
-    .footer a {
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-year {
-      font-size: 0.8rem;
-    }
-
-    .back-button {
-      margin: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .header {
-      padding: 1rem 0.5rem;
-    }
-
-    .logo {
-      font-size: 2rem;
-    }
-
-    .content-container {
-      padding: 1rem;
-      max-width: 98%;
-    }
-
-    .content-container h1 {
-        font-size: 1.5rem;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-    }
-
-    .content-container p,
-    .content-container li {
-      font-size: 0.9rem;
-    }
-
-    .footer {
-      padding: 0.8rem;
-    }
-
-    .footer a {
-      margin: 0 0.3rem;
-      font-size: 0.85rem;
-    }
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Nevear Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-  <div class="header">
-    <div class="logo">NEVEAR GAMES</div>
-    <a href="/nevearweb" class="back-button">← Back to Home</a>
-  </div>
-
-  <div class="content-container">
-    <h1>Terms of Service</h1>
-    <p>Last updated: November 1, 2024</p>
-
-    <div class="section-title">1. Acceptance of Terms</div>
-    <p>By accessing and using Nevear Games' services, including our games and website, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
-
-    <div class="section-title">2. Liability for Game Performance</div>
-    <p>Nevear Games does not guarantee uninterrupted or error-free gameplay and is not liable for any device performance issues arising from running the game.</p>
-
-    <div class="section-title">3. Intellectual Property</div>
-    <p>All games, content, and materials available through Nevear Games are protected by intellectual property rights. You may not modify, distribute, or create derivative works based on our content without explicit written permission.</p>
-
-    <div class="section-title">4. User Conduct</div>
-    <p>Users agree not to engage in any activity that interferes with or disrupts the services, servers, or networks connected to Nevear Games. This includes attempting to gain unauthorized access to our services or other users' accounts.</p>
-
-    <div class="section-title">5. Game Content</div>
-    <p>Our games may contain mature themes and psychological horror elements. Users acknowledge that they are accessing this content at their own risk and discretion.</p>
-
-    <div class="section-title">6. Modifications to Service</div>
-    <p>Nevear Games reserves the right to modify or discontinue, temporarily or permanently, any part of our services with or without notice.</p>
-  </div>
-
-  <div class="footer">
-    <div>
-      <a href="https://neveargames.github.io/nevearweb/privacy-policy">Privacy Policy</a>
-      <a href="https://neveargames.github.io/nevearweb/terms-of-service">Terms of Service</a>
-    </div>
-    <div class="footer-year">© 2024 Nevear Games. All rights reserved.</div>
-  </div>
-
-  <script>
-    const header = document.querySelector('.header');
-    let offset = 0;
+    <div class="noise-overlay"></div>
+    <div class="vignette"></div>
     
-    function animateBackground() {
-      offset += 0.5;
-      header.style.backgroundPosition = `${offset}px ${offset}px`;
-      requestAnimationFrame(animateBackground);
-    }
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>NEVEAR</h1>
+                <span class="subtitle">GAMES</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Back to Home</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    animateBackground();
-  </script>
-</body></html>
+    <main style="padding: 8rem 4rem; max-width: 800px; margin: 0 auto;">
+        <h1 style="margin-bottom: 2rem;">Terms of Service</h1>
+    <div style="margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1rem;">Last updated: November 1, 2024</div>
+    <p style="margin-bottom: 1.5rem; color: var(--off-white);">
+            By accessing and using Nevear Games' website and services, you agree to these terms.
+        </p>
+
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Liability for Game Performance</h2>
+        <p style="color: var(--off-white);">
+            Nevear Games does not guarantee uninterrupted or error-free gameplay and is not liable for any device performance issues arising from running the game.
+        </p>
+
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Intellectual Property</h2>
+        <p style="color: var(--off-white);">
+            All games, content, and materials available through Nevear Games are protected by intellectual property rights. You may not modify, distribute, or create derivative works based on our content without explicit written permission.
+        </p>
+
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">User Conduct</h2>
+        <p style="color: var(--off-white);">
+            Users agree not to engage in any activity that interferes with or disrupts the services, servers, or networks connected to Nevear Games. This includes attempting to gain unauthorized access to our services or other users' accounts.
+        </p>
+
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Game Content</h2>
+        <p style="color: var(--off-white);">
+            Our games may contain mature themes and psychological horror elements. Users acknowledge that they are accessing this content at their own risk and discretion.
+        </p>
+
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Modifications to Service</h2>
+        <p style="color: var(--off-white);">
+            Nevear Games reserves the right to modify or discontinue, temporarily or permanently, any part of our services with or without notice.
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Nevear Games</h4>
+                <p>Independent horror game development studio</p>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nevear Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
