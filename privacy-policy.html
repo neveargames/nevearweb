@@ -1,271 +1,123 @@
-<html><head><base href="/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="/nevearweb/images/logo.png">
-<title>Nevear Games - Privacy Policy</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Crimson Text', serif;
-    background-color: #0a1520;
-    color: #ffffff;
-    padding-bottom: 100px; /* Space for fixed footer */
-  }
-
-  .header {
-    background: linear-gradient(rgba(10,21,32,0.7), rgba(10,21,32,0.9)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a2535"/><path d="M0 50 L100 50" stroke="%23233545" stroke-width="0.5"/></svg>');
-    padding: 2rem;
-    text-align: center;
-  }
-
-  .logo {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5);
-    animation: flicker 4s infinite;
-  }
-
-  @keyframes flicker {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.9; }
-    25%, 75% { opacity: 0.7; }
-  }
-
-  .content-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #1a2535;
-    border: 1px solid #2a3545;
-    line-height: 1.6;
-    color: #b0c4de; /* Base text color for content */
-  }
-
-  .content-container h1 {
-      /* Reverted: Removed explicit color #ffffff, it will now inherit #b0c4de */
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-  }
-
-  .content-container p {
-      margin-bottom: 1em;
-  }
-
-  .content-container ul {
-      margin-left: 1.5em;
-      margin-bottom: 1em;
-  }
-
-  .content-container ul li {
-      margin-bottom: 0.5em;
-  }
-
-  .section-title {
-    color: #ffffff; /* This remains white as per your original structure */
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  .footer {
-    background: #0f1925;
-    padding: 1.5rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    z-index: 1000; /* Ensure footer stays on top */
-  }
-
-  .footer a {
-    color: #b0c4de;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
-  }
-
-  .footer a:hover {
-    color: #ffffff;
-  }
-
-  .footer-year {
-    color: #4a5565;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-
-  .back-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #233545;
-    color: #b0c4de;
-    text-decoration: none;
-    margin: 1rem;
-    transition: background-color 0.3s;
-  }
-
-  .back-button:hover {
-    background: #2a3545;
-    color: #ffffff;
-  }
-
-  /* --- Media Queries for Mobile Responsiveness --- */
-  @media (max-width: 768px) {
-    .header {
-      padding: 1.5rem 1rem;
-    }
-
-    .logo {
-      font-size: 2.5rem;
-    }
-
-    .content-container {
-      margin: 1rem auto;
-      padding: 1.5rem;
-      width: auto;
-      max-width: 95%;
-    }
-
-    .content-container h1 {
-        /* This rule now only sets font-size, color will inherit from .content-container */
-        font-size: 1.7rem;
-    }
-
-    .section-title {
-      font-size: 1.3rem;
-      margin-top: 1.5rem;
-    }
-
-    .content-container p,
-    .content-container li {
-      font-size: 0.95rem;
-    }
-
-    .footer {
-      padding: 1rem;
-    }
-
-    .footer a {
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-year {
-      font-size: 0.8rem;
-    }
-
-    .back-button {
-      margin: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .header {
-      padding: 1rem 0.5rem;
-    }
-
-    .logo {
-      font-size: 2rem;
-    }
-
-    .content-container {
-      padding: 1rem;
-      max-width: 98%;
-    }
-
-    .content-container h1 {
-        font-size: 1.5rem;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-    }
-
-    .content-container p,
-    .content-container li {
-      font-size: 0.9rem;
-    }
-
-    .footer {
-      padding: 0.8rem;
-    }
-
-    .footer a {
-      margin: 0 0.3rem;
-      font-size: 0.85rem;
-    }
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Nevear Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
-  <div class="header">
-    <div class="logo">NEVEAR GAMES</div>
-    <a href="/nevearweb" class="back-button">← Back to Home</a>
-  </div>
+    <div class="noise-overlay"></div>
+    <div class="vignette"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>NEVEAR</h1>
+                <span class="subtitle">GAMES</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Back to Home</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <div class="content-container">
-    <h1>Privacy Policy</h1>
-    <p>Last updated: November 1, 2024</p>
+    <main style="padding: 8rem 4rem; max-width: 800px; margin: 0 auto;">
+        <h1 style="margin-bottom: 2rem;">Privacy Policy</h1>
+    <div style="margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1rem;">Last updated: November 1, 2024</div>
+    <p style="margin-bottom: 1.5rem; color: var(--off-white);">
+            At Nevear Games, we take your privacy seriously. This policy outlines how we collect, use, and protect your information when you visit our website or interact with our games.
+        </p>
 
-    <div class="section-title">1. Data Collection</div>
-    <p>Nevear Games prioritizes user privacy and does not collect any personal information. However, we utilize third-party services that may collect data. We have carefully chosen trusted partners who adhere to privacy regulations. Users are encouraged to review the privacy policies of these services. We are committed to providing a secure and enjoyable gaming experience.</p>
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Data Collection</h2>
+        <p style="color: var(--off-white);">
+            Nevear Games prioritizes user privacy and does not collect any personal information. However, we utilize third-party services that may collect data. We have carefully chosen trusted partners who adhere to privacy regulations. Users are encouraged to review the privacy policies of these services. We are committed to providing a secure and enjoyable gaming experience.
+        </p>
 
-    <div class="section-title">2. Third-Party Services</div>
-    <p>Our games may include third-party services, such as analytics tools or advertisements. These services may collect and use data according to their own privacy policies. We encourage you to review the privacy policies of these third-party services for more information.</p>
-      <ul>
-          <li>Advertisment - <a href="https://www.yodo1.com/en/privacy/" target="_blank">Yodo1</a></li>
-          <li>Analytics - <a href="https://unity3d.com/legal/privacy-policy" target="_blank">Unity</a></li>
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Third-Party Services</h2>
+        <p style="color: var(--off-white);">
+            Our games may include third-party services, such as analytics tools or advertisements. These services may collect and use data according to their own privacy policies. We encourage you to review the privacy policies of these third-party services for more information.
+        </p>
+        <ul style="color: var(--off-white); margin-bottom: 1rem; margin-left: 2rem;">
+            <li>Advertisment - <a href="https://policy.yodo1.com/website/en/privacy.html" target="_blank" style="color: var(--off-white); text-decoration: underline;">Yodo1</a></li>
+            <li>Analytics - <a href="https://unity.com/legal/privacy-policy" target="_blank" style="color: var(--off-white); text-decoration: underline;">Unity</a></li>
         </ul>
 
-    <div class="section-title">3. Data Protection</div>
-    <p>We employ industry-standard security measures to protect the data we collect from unauthorized access, disclosure, alteration, or destruction. We take all necessary security measures so as to prevent as far as practically possible any alteration or loss of your data or any unauthorised access there unto. In such instance as we should be aware of any illegal access to personal data concerning you and corresponding to processing for which we are responsible, we undertake to notify you of the incident as soon as possible if this fulfils a legal requirement.</p>
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Your Rights</h2>
+        <p style="color: var(--off-white);">
+            Your rights under the GDPR include:
+        </p>
+        <ul style="color: var(--off-white); margin-bottom: 1rem; margin-left: 2rem;">
+            <li>Right to object how your data is handled in accordance with Art. 21 GDPR (e.g., you can contact us if you do not agree with any user analytics procedures as described within this privacy policy).</li>
+            <li>Right to send complaints to the supervisory authority in accordance with Art. 77 para. 1 f GDPR (e.g., you can contact the data protection supervisory authority directly).</li>
+        </ul>
+        <p style="color: var(--off-white);">
+            Nevear Games is not able to access/correct/delete your data since we don't save this data. This data is only used through 3rd parties.
+        </p>
 
-      <div class="section-title">4. Your Rights</div>
-      <p>Your rights under the GDPR include:</p>
-      <ul>
-        <li>Right to object how your data is handled in accordance with Art. 21 GDPR (e.g., you can contact us if you do not agree with any user analytics procedures as described within this privacy policy).</li>
-        <li>Right to send complaints to the supervisory authority in accordance with Art. 77 para. 1 f GDPR (e.g., you can contact the data protection supervisory authority directly).</li>
-      </ul>
-      <p>Nevear Games is not able to access/correct/delete your data since we don't save this data. This data is only used through 3rd parties.</p>
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Age Certification</h2>
+        <p style="color: var(--off-white);">
+            In order to access or use our Services, it is necessary for the user to be of legal age in each jurisdiction. At a minimum, you must be over 13 years of age, as indicated in Regulation (EU) 679/2016. However, by way of example, there are countries that raise that age of majority, such as Germany (16 years), France (15 years) and Italy (14 years). The user guarantees and responds to the fulfillment of this requirement.
+        </p>
 
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Updates to Privacy Policy</h2>
+        <p style="color: var(--off-white);">
+            Nevear Games reserves the right to modify or discontinue, temporarily or permanently, any part of our services with or without notice.
+        </p>
+        
+        <h2 style="margin: 2rem 0 1rem; color: var(--white);">Contact Us</h2>
+        <p style="color: var(--off-white);">
+            If you have any questions or concerns about our privacy policy or how we handle your data, please contact us at neveargames@gmail.com.
+        </p>
+    </main>
 
-    <div class="section-title">5. Age Certification</div>
-    <p>In order to access or use our Services, it is necessary for the user to be of legal age in each jurisdiction. At a minimum, you must be over 13 years of age, as indicated in Regulation (EU) 679/2016. However, by way of example, there are countries that raise that age of majority, such as Germany (16 years), France (15 years) and Italy (14 years). The user guarantees and responds to the fulfillment of this requirement.</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Nevear Games</h4>
+                <p>Independent horror game development studio</p>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nevear Games. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <div class="section-title">6. Updates to Privacy Policy</div>
-    <p>Nevear Games reserves the right to modify or discontinue, temporarily or permanently, any part of our services with or without notice.</p>
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
 
-      <div class="section-title">7. Contact Us</div>
-      <p>If you have any questions or concerns about our privacy policy or how we handle your data, please contact us at neveargames@gmail.com.</p>
-      <br>By playing our games, you consent to the collection, use, and protection of your data as described in this privacy policy.
-  </div>
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
 
-  <div class="footer">
-    <div>
-      <a href="https://neveargames.github.io/nevearweb/privacy-policy">Privacy Policy</a>
-      <a href="https://neveargames.github.io/nevearweb/terms-of-service">Terms of Service</a>
-    </div>
-    <div class="footer-year">© 2024 Nevear Games. All rights reserved.</div>
-  </div>
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
 
-  <script>
-    const header = document.querySelector('.header');
-    let offset = 0;
-    
-    function animateBackground() {
-      offset += 0.5;
-      header.style.backgroundPosition = `${offset}px ${offset}px`;
-      requestAnimationFrame(animateBackground);
-    }
-
-    animateBackground();
-  </script>
-</body></html>
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
