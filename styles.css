@@ -62,7 +62,8 @@ nav {
     align-items: center;
 }
 
-.logo h1 {
+.logo h1,
+.logo .logo-title {
     font-family: 'Crimson Text', serif;
     font-size: 2rem;
     font-weight: 600;
@@ -221,8 +222,9 @@ nav {
 }
 
 .game-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -234,6 +236,8 @@ nav {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 500px;
+    max-width: 500px;
 }
 
 .game-card:hover {
@@ -259,6 +263,10 @@ nav {
 
 .electric-bg {
     background: linear-gradient(135deg, var(--accent-blue), var(--red-accent));
+}
+
+.casual-bg {
+    background: linear-gradient(135deg, #f12711, #f5af19);
 }
 
 .game-overlay {
@@ -384,22 +392,23 @@ footer {
     
     .nav-links {
         position: fixed;
-        top: 0;
-        right: -100%;
+        top: -100vh;
+        left: 0;
         height: 100vh;
-        width: 250px;
-        background: var(--dark-blue);
+        width: 100%;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 3rem;
-        transition: right 0.3s ease;
-        z-index: 999;
-        border-left: 1px solid var(--border-color);
+        transition: top 0.4s cubic-bezier(0.1, 0.76, 0.55, 0.94);
+        z-index: 99;
+        border-bottom: 1px solid var(--border-color);
     }
     
     .nav-links.active {
-        right: 0;
+        top: 0;
     }
     
     .nav-links a {
@@ -429,7 +438,7 @@ footer {
     }
     
     .game-grid {
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
     
     .footer-content {

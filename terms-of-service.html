@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Nevear Games</title>
+    <meta name="description" content="Terms of Service for Nevear Games. Read our terms and conditions for using our website and games.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -14,13 +15,13 @@
     <header>
         <nav>
             <div class="logo">
-                <h1>NEVEAR</h1>
+                <div class="logo-title">NEVEAR</div>
                 <span class="subtitle">GAMES</span>
             </div>
             <div class="nav-links">
-                <a href="index.html">Back to Home</a>
+                <a href="index.html" id="nav-link-home">Back to Home</a>
             </div>
-            <div class="hamburger">
+            <div class="hamburger" id="nav-hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -65,7 +66,7 @@
         <div class="footer-content">
             <div class="footer-info">
                 <h4>Nevear Games</h4>
-                <p>Independent horror game development studio</p>
+                <p>Independent game development studio</p>
             </div>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
@@ -95,9 +96,9 @@
             });
         });
 
-        // Close menu when clicking outside
+        // Close menu when clicking outside or on the backdrop itself
         document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            if (!hamburger.contains(e.target) && (!navLinks.contains(e.target) || e.target === navLinks)) {
                 hamburger.classList.remove('active');
                 navLinks.classList.remove('active');
             }

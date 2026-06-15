@@ -63,9 +63,9 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Close menu when clicking outside
+// Close menu when clicking outside or on the backdrop itself
 document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+    if (!hamburger.contains(e.target) && (!navLinks.contains(e.target) || e.target === navLinks)) {
         hamburger.classList.remove('active');
         navLinks.classList.remove('active');
     }

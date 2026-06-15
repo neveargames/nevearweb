@@ -1,30 +1,36 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nevear Games - Indie Horror Developer Studio</title>
+    <title>Nevear Games - Independent Game Studio</title>
+    <meta name="description"
+        content="Nevear Games is an independent game development studio born from a passion for game development and a love for horror, crafting atmospheric and casual gaming experiences.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
+
 <body>
     <div class="noise-overlay"></div>
     <div class="vignette"></div>
-    
+
     <header>
         <nav>
             <div class="logo">
-                <h1>NEVEAR</h1>
+                <div class="logo-title">NEVEAR</div>
                 <span class="subtitle">GAMES</span>
             </div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#games">Games</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" id="nav-link-about">About</a>
+                <a href="#games" id="nav-link-games">Games</a>
+                <a href="#contact" id="nav-link-contact">Contact</a>
             </div>
-            <div class="hamburger">
+            <div class="hamburger" id="nav-hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,8 +41,9 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h2 class="hero-title">Where Nightmares<br>Breathe</h2>
-                <p class="hero-subtitle">Independent horror game studio crafting psychological experiences that linger long after the screen goes dark.</p>
+                <h1 class="hero-title">Where Nightmares<br>Breathe</h1>
+                <p class="hero-subtitle">Independent game studio crafting memorable experiences, born from a passion for
+                    game development and a love for horror.</p>
             </div>
             <div class="hero-visual">
                 <div class="floating-particles"></div>
@@ -47,10 +54,14 @@
             <div class="container">
                 <h3 class="section-title">About Nevear Games</h3>
                 <p class="about-text">
-                    Born from late-night conversations about the nature of fear, Nevear Games is an independent studio dedicated to exploring the darkest corners of human experience. We believe horror transcends jump scares—it's about the slow unraveling of what we thought we understood about ourselves and the world around us.
+                    Nevear Games is an independent studio born from a raw passion for game development and a deep love
+                    for the horror genre. While our journey started with a focus on psychological thrillers, we love
+                    exploring diverse game genres from deep atmospheric horror to engaging casual 2D action games.
                 </p>
                 <p class="about-text">
-                    Each project begins with a question: "What keeps you awake at 3 AM?" From these whispers in the dark, we craft experiences that don't just frighten, but disturb, unsettle, and ultimately reveal something true about the human condition.
+                    Whether we are crafting slow-burn mysteries that linger long after the screen goes dark or
+                    fast-paced casual titles, we pour our heart into creating gameplay experiences that resonate. Every
+                    project we build starts with a dedication to creativity, fun, and the craft of game design.
                 </p>
             </div>
         </section>
@@ -60,42 +71,73 @@
             <div class="game-grid">
                 <div class="game-card" data-game="her-diary">
                     <div class="game-image">
-                        <img src="images/her_diary_image.jpg" alt="Her Diary Game" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/her_diary_image.jpg" alt="Her Diary Game"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="game-overlay">
                             <span class="game-tag">Psychological Horror</span>
                         </div>
                     </div>
                     <div class="game-content">
                         <h4 class="game-title">Her Diary</h4>
-                        <p class="game-description">A tragic descent into a young girl's tragic fate, whose diary entries reveal a story far more disturbing than anyone could have imagined. Navigate between reality and delusion as you piece together what really happened in those final days.</p>
+                        <p class="game-description">A tragic descent into a young girl's tragic fate, whose diary
+                            entries reveal a story far more disturbing than anyone could have imagined. Navigate between
+                            reality and delusion as you piece together what really happened in those final days.</p>
                         <div class="game-features">
                             <span class="feature">First-person</span>
                             <span class="feature">Atmospheric</span>
                             <span class="feature">Jump scare</span>
                         </div>
                         <a href="https://play.google.com/store/apps/details?id=com.Nevear.HerDiary" target="_blank">
-                            <button class="game-cta">Download</button>
+                            <button class="game-cta" id="btn-download-her-diary">Download</button>
                         </a>
                     </div>
                 </div>
 
                 <div class="game-card" data-game="electric-heart">
                     <div class="game-image">
-                        <img src="images/electric_heart_image.jpg" alt="Her Diary Game" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/electric_heart_image.jpg" alt="Her Diary Game"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                         <div class="game-overlay">
                             <span class="game-tag">Sci-Fi Horror</span>
                         </div>
                     </div>
                     <div class="game-content">
                         <h4 class="game-title">Electric Heart</h4>
-                        <p class="game-description">In the abandoned research facility, an AI that was supposed to save humanity has learned that survival requires sacrifice. But what happens when an artificial intelligence discovers it can feel fear—and worse, cause it?</p>
+                        <p class="game-description">In the abandoned research facility, an AI that was supposed to save
+                            humanity has learned that survival requires sacrifice. But what happens when an artificial
+                            intelligence discovers it can feel fear—and worse, cause it?</p>
                         <div class="game-features">
                             <span class="feature">First-person</span>
                             <span class="feature">Multiple endings</span>
                             <span class="feature">Action horror</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.Nevear.ElectricHeart" target="_blank">
-                            <button class="game-cta">Download</button>
+                        <a href="https://play.google.com/store/apps/details?id=com.Nevear.ElectricHeart"
+                            target="_blank">
+                            <button class="game-cta" id="btn-download-electric-heart">Download</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="game-card" data-game="casual-action-game">
+                    <div class="game-image">
+                        <img src="images/construction_chaos.jpg" alt="Construction Chaos Game"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="game-overlay">
+                            <span class="game-tag">2D Action / Casual</span>
+                        </div>
+                    </div>
+                    <div class="game-content">
+                        <h4 class="game-title">Construction Chaos</h4>
+                        <p class="game-description">An exciting arcade construction game where you compete against rival
+                            workers, complete walls, collect power-ups, and battle powerful bosses in a race to dominate
+                            the building site.</p>
+                        <div class="game-features">
+                            <span class="feature">2D Action</span>
+                            <span class="feature">Casual</span>
+                            <span class="feature">Single Player</span>
+                        </div>
+                        <a href="#" target="_blank">
+                            <button class="game-cta" id="btn-download-casual-game">Download</button>
                         </a>
                     </div>
                 </div>
@@ -107,7 +149,7 @@
         <div class="footer-content">
             <div class="footer-info">
                 <h4>Nevear Games</h4>
-                <p>Independent horror game development studio</p>
+                <p>Independent game development studio</p>
             </div>
             <div class="footer-links">
                 <a href="privacy-policy.html">Privacy Policy</a>
@@ -122,4 +164,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
